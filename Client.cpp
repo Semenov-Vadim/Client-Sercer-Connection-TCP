@@ -39,7 +39,9 @@ int main(){
 
 
 
-    char buffer[BUFFER_SIZE];
+    //char buffer[BUFFER_SIZE];
+    char message[] = "Hello world";
+    int length = sizeof(message)/sizeof(char);
     /*
     std::cout<< "Waiting for server confirmation...\n";
     recv(client, buffer, BUFFER_SIZE, 0);
@@ -52,8 +54,9 @@ int main(){
 
     //отправка сообщения серверу
     std::cout<< "CLIENT: ";
-    std::cin.getline(buffer, BUFFER_SIZE);
-    send(client, buffer, BUFFER_SIZE, 0);
+    //std::cin.getline(buffer, BUFFER_SIZE);
+    //send(client, buffer, BUFFER_SIZE, 0);
+    send(client, message, length, 0);
 
 
 
